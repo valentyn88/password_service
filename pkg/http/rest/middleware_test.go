@@ -48,7 +48,7 @@ func TestHandler_RequestParam(t *testing.T) {
 		t.Log(tc.name)
 
 		bb := bytes.NewBuffer([]byte(tc.body))
-		req, err := http.NewRequest("POST", "/generate", bb)
+		req, err := http.NewRequest("POST", "/v1/generate", bb)
 		if err != nil {
 			t.Fatal(err)
 		}

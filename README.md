@@ -38,7 +38,7 @@ You can test API in your browser:
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"letters_len":2,"spec_ch_len":2,"numbers_len":5, "count":10}' \
-  http://localhost:8080/generate
+  http://localhost:8080/v1/generate
 ```
 
 400 Bad Request invalid request params
@@ -47,7 +47,7 @@ curl --header "Content-Type: application/json" \
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"letters_len":5,"spec_ch_len":5,"numbers_len":6, "count":10}' \
-  http://localhost:8080/generate
+  http://localhost:8080/v1/generate
 ```
 
 400 Bad Request invalid count passwords
@@ -56,5 +56,5 @@ curl --header "Content-Type: application/json" \
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"letters_len":5,"spec_ch_len":5,"numbers_len":5, "count":51}' \
-  http://localhost:8080/generate
+  http://localhost:8080/v1/generate
 ```

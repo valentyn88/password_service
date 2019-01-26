@@ -14,7 +14,7 @@ import (
 )
 
 func TestHandler_GeneratePasswords_Fail(t *testing.T) {
-	req, err := http.NewRequest("POST", "/generate", nil)
+	req, err := http.NewRequest("POST", "/v1/generate", nil)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -35,7 +35,7 @@ func TestHandler_GeneratePasswords_Fail(t *testing.T) {
 }
 
 func TestHandler_GeneratePasswords_Success(t *testing.T) {
-	req, err := http.NewRequest("POST", "/generate", nil)
+	req, err := http.NewRequest("POST", "/v1/generate", nil)
 	if err != nil {
 		t.Fatal(err)
 	}

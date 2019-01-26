@@ -19,7 +19,7 @@ func main() {
 	var h rest.Handler
 	h.PasswordService = secure_password.PasswordService{}
 
-	http.HandleFunc("/generate", h.RequestParam(h.GeneratePasswords))
+	http.HandleFunc("/v1/generate", h.RequestParam(h.GeneratePasswords))
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatalf("couldn't start password server error: %s", err.Error())
 	}
